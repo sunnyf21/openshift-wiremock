@@ -11,7 +11,6 @@ RUN yum install -y centos-release-openshift-origin epel-release java-1.8.0-openj
     yum clean all && \
     mkdir -p /opt/wiremock
 
-COPY init.sh .kube /opt/wiremock/
 
 RUN mkdir -p /var/lib/wiremock && \
     chown -R 10001:0 /opt/wiremock /var/lib/wiremock && \
